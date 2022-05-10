@@ -1,10 +1,11 @@
+import React from 'react';
 import logo from '../logo.svg';
 import './App.css';
 import ImageCarousel from "./ImageCarousel";
 
 function App() {
   return (
-      <div>
+      <div data-testid="home-container" style={{padding: "40px"}}>
         <ImageCarousel />
       </div>
   );
