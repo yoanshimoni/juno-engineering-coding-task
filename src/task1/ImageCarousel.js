@@ -1,5 +1,5 @@
 import React from "react";
-import { fetchImageUrls } from "../api/index";
+import { fetchImages } from "../api/index";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -11,7 +11,7 @@ const ImageCarousel = () => {
 
     React.useEffect(async () => {
         try {
-            setImages(await fetchImageUrls());
+            setImages(await fetchImages());
         } catch (e) {
             console.log("Unable to fetch images", { e });
         }
